@@ -1,0 +1,811 @@
+{
+	"info": {
+		"_postman_id": "896bcf1f-148f-4ed0-9bdd-df8541efc154",
+		"name": "SegundoParcial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29810521"
+	},
+	"item": [
+		{
+			"name": "alta cliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE0ODc4MjQsImV4cCI6MTcwMjA4NzgyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsIklkIjoxLCJOb21icmUiOiJicmljZVx1MDBmMW8iLCJNYWlsIjoiYmljZVx1MDBmMW9AIiwiUm9sIjoiR0VSRU5URSJ9.YvypKVOU_XtpHii7IVkdGaQjupwYjDZ7ztWnrhyW8yM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "petri",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "briceño",
+							"type": "text"
+						},
+						{
+							"key": "tipoDocumento",
+							"value": "pasaporte",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "ef%&C",
+							"type": "text"
+						},
+						{
+							"key": "tipoCliente",
+							"value": "indi",
+							"type": "text"
+						},
+						{
+							"key": "pais",
+							"value": "argentinasss",
+							"type": "text"
+						},
+						{
+							"key": "ciudad",
+							"value": "hamburgos",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "2313215122",
+							"type": "text"
+						},
+						{
+							"key": "fotoPerfil",
+							"type": "file",
+							"src": "/C:/Users/kervi/OneDrive/Imágenes/Capturas de pantalla/2022-11-26 (2).png"
+						},
+						{
+							"key": "numeroDocumento",
+							"value": "1351513213521",
+							"type": "text"
+						},
+						{
+							"key": "modalidadPago",
+							"value": "efectivo",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "activo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes/alta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultas reserva b",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas/consultaPorNumeroCliente?numeroDeCliente=802377",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"consultaPorNumeroCliente"
+					],
+					"query": [
+						{
+							"key": "accion",
+							"value": "consultarReservas",
+							"disabled": true
+						},
+						{
+							"key": "listar",
+							"value": "b",
+							"disabled": true
+						},
+						{
+							"key": "numeroDeCliente",
+							"value": "802377"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reservar habitacion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE0ODIyMzcsImV4cCI6MTcwMjA4MjIzNywiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsIklkIjoxLCJOb21icmUiOiJicmljZVx1MDBmMW8iLCJNYWlsIjoiYmljZVx1MDBmMW9AIiwiUm9sIjoiR0VSRU5URSJ9.n6ybInHl1NaIig8RRyiY3uGhGOJj8Z2-C7aQ26GohHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tipoCliente",
+							"value": "indi",
+							"type": "text"
+						},
+						{
+							"key": "numeroCliente",
+							"value": "428351",
+							"type": "text"
+						},
+						{
+							"key": "fechaDeEntrada",
+							"value": "2023-11-9",
+							"type": "text"
+						},
+						{
+							"key": "fechaDeSalida",
+							"value": "2023-11-15",
+							"type": "text"
+						},
+						{
+							"key": "tipoHabitacion",
+							"value": "Simple",
+							"type": "text"
+						},
+						{
+							"key": "importeTotalReserva",
+							"value": "15000",
+							"type": "text"
+						},
+						{
+							"key": "fotoReserva",
+							"type": "file",
+							"src": "/C:/Users/kervi/OneDrive/Imágenes/Capturas de pantalla/2022-11-26 (2).png"
+						},
+						{
+							"key": "estado",
+							"value": "abierto",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/reservas/alta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tipoCliente",
+							"value": "indi",
+							"type": "text"
+						},
+						{
+							"key": "numeroCliente",
+							"value": "815811",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes/consultar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"consultar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar reserva c",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE0ODIyMzcsImV4cCI6MTcwMjA4MjIzNywiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsIklkIjoxLCJOb21icmUiOiJicmljZVx1MDBmMW8iLCJNYWlsIjoiYmljZVx1MDBmMW9AIiwiUm9sIjoiR0VSRU5URSJ9.n6ybInHl1NaIig8RRyiY3uGhGOJj8Z2-C7aQ26GohHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas/consultaPorFechaOrdenada?fechaUno=2012-11-20&fechaDos=2023-11-15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"consultaPorFechaOrdenada"
+					],
+					"query": [
+						{
+							"key": "accion",
+							"value": "consultarReservas",
+							"disabled": true
+						},
+						{
+							"key": "listar",
+							"value": "c",
+							"disabled": true
+						},
+						{
+							"key": "fechaUno",
+							"value": "2012-11-20"
+						},
+						{
+							"key": "fechaDos",
+							"value": "2023-11-15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar reserva a",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas/consultaPorFecha?fecha=2023-11-09&tipoHabitacion=Simple",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"consultaPorFecha"
+					],
+					"query": [
+						{
+							"key": "accion",
+							"value": "consultarReservas",
+							"disabled": true
+						},
+						{
+							"key": "listar",
+							"value": "a",
+							"disabled": true
+						},
+						{
+							"key": "fecha",
+							"value": "2023-11-09"
+						},
+						{
+							"key": "tipoHabitacion",
+							"value": "Simple"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar reserva d",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDE0ODYxNjgsImV4cCI6MTcwMjA4NjE2OCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsIklkIjo1LCJOb21icmUiOiJtYXJpc29sIiwiTWFpbCI6InRlcmFuQGdpdCIsIlJvbCI6IlJFQ0VQQ0lPTklTVEEifQ.Spbs0l9YdatW4vLCPO4VYYmj9C9Y6mENpWN7rm4iyNc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas/consultaPorTipoReserva?tipoReserva=simple",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"consultaPorTipoReserva"
+					],
+					"query": [
+						{
+							"key": "listar",
+							"value": "d",
+							"disabled": true
+						},
+						{
+							"key": "tipoReserva",
+							"value": "simple"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificar cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n\r\n{\r\n  \"numeroCliente\": 750324,\r\n  \"nombre\": \"petro\",\r\n  \"apellido\": \"Doe\",\r\n  \"tipoDocumento\": \"DNI\",\r\n  \"numeroDocumento\": \"12345678\",\r\n  \"mail\": \"casa@odificado\",\r\n  \"tipoCliente\": \"INDI\",\r\n  \"pais\": \"Argentina\",\r\n  \"ciudad\": \"Buenos Aires\",\r\n  \"telefono\": \"1234567890\",\r\n  \"modalidadPago\": \"Efectivo\",\r\n  \"estado\": \"Activo\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"modificar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancelar Reserva",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tipoCliente",
+							"value": "INDI",
+							"type": "text"
+						},
+						{
+							"key": "numeroCliente",
+							"value": "815811",
+							"type": "text"
+						},
+						{
+							"key": "idReserva",
+							"value": "14",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "ocupado",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/reservas/CancelarReserva",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"CancelarReserva"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ajustes Reserva",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accion",
+						"value": "ajustesReserva",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "IdReserva",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "motivo",
+							"value": "devaluacion",
+							"type": "text"
+						},
+						{
+							"key": "importe",
+							"value": "15000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/reservas/AjusteReserva",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"AjusteReserva"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borrarCliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes/BorrarCliente?tipoCliente=INDI&numeroCliente=136540",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"BorrarCliente"
+					],
+					"query": [
+						{
+							"key": "accion",
+							"value": "borrarCliente",
+							"disabled": true
+						},
+						{
+							"key": "tipoCliente",
+							"value": "INDI"
+						},
+						{
+							"key": "numeroCliente",
+							"value": "136540"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultarReservaDos a",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas/cancelacionesPorTipoClienteYFecha?tipoCliente=INDI&fechaConsulta=2023-11-09",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"cancelacionesPorTipoClienteYFecha"
+					],
+					"query": [
+						{
+							"key": "tipoCliente",
+							"value": "INDI"
+						},
+						{
+							"key": "fechaConsulta",
+							"value": "2023-11-09"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar reserva dos b ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas/listarCancelacionesPorCliente?numeroCliente=802377",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"listarCancelacionesPorCliente"
+					],
+					"query": [
+						{
+							"key": "accion",
+							"value": "consultarReservasDos",
+							"disabled": true
+						},
+						{
+							"key": "numeroCliente",
+							"value": "802377"
+						},
+						{
+							"key": "listar",
+							"value": "b",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultarReserDos d ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas/listarCancelacionesPorTipoCliente?tipoCliente=indi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"listarCancelacionesPorTipoCliente"
+					],
+					"query": [
+						{
+							"key": "accion",
+							"value": "consultarReservasDos",
+							"disabled": true
+						},
+						{
+							"key": "tipoCliente",
+							"value": "indi"
+						},
+						{
+							"key": "listar",
+							"value": "d",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reservas consultar e ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas/listarPorCliente?numeroCliente=802377",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"listarPorCliente"
+					],
+					"query": [
+						{
+							"key": "accion",
+							"value": "consultarReservasDos",
+							"disabled": true
+						},
+						{
+							"key": "numeroCliente",
+							"value": "802377"
+						},
+						{
+							"key": "listar",
+							"value": "e",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar reservas dos c",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas/listarCancelacionesEntreFecha?fechaInicio=2012-11-10&fechaFin=2025-11-10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"listarCancelacionesEntreFecha"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "2012-11-10"
+						},
+						{
+							"key": "fechaFin",
+							"value": "2025-11-10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consulta reserva f",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reservas/listarPorModalidad?modalidad=EFECTIVO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reservas",
+						"listarPorModalidad"
+					],
+					"query": [
+						{
+							"key": "modalidad",
+							"value": "EFECTIVO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alta usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "matya",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "terna@git",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "1345wa",
+							"type": "text"
+						},
+						{
+							"key": "rol",
+							"value": "RECEPCIONISTA",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/alta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoggingUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mail",
+							"value": "biceño@",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "1345w",
+							"type": "text"
+						},
+						{
+							"key": "rol",
+							"value": "GERENTE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/LoggingUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"LoggingUsuario"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
