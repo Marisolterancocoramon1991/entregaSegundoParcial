@@ -7,7 +7,10 @@ ini_set('display_errors', 1);
 require_once "./clases/clientes.php";
 require_once './controllers/clienteController.php';
 require_once './controllers/reservaController.php';
-
+require_once './controllers/usuariosController.php';
+require_once './clases/usuarios.php';
+require_once "./middlewares/Logger.php";
+require_once "./middlewares/AuthJWT.php";
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -37,7 +40,7 @@ $app->group('/clientes', function (RouteCollectorProxy $group) {
     $group->put('/modificar', \clienteController::class . ':modificarClienteDos');
     $group->delete('/BorrarCliente', \clienteController::class . ':BorrarCliente');
 
-});
+})->add(\AuthJWT::class . ':registroMovimientos')->add(\AuthJWT::class . ':VerificarTokenValido')->add(\AuthJWT::class . ':VerificarTokenRolGerente')->add(\AuthJWT::class . ':registrarMovimientoExitoso');
 
 $app->group('/reservas', function(RouteCollectorProxy $group){
     $group->post('/alta', \reservaController::class . ':ReservaHabitacion');
@@ -53,6 +56,18 @@ $app->group('/reservas', function(RouteCollectorProxy $group){
     $group->get('/listarCancelacionesPorTipoCliente', \reservaController::class . ':listarCancelacionesPorTipoCliente');
     $group->get('/listarPorCliente', \reservaController::class . ':listarPorCliente');
     $group->get('/listarPorModalidad', \reservaController::class . ':listarPorModalidad');
+})->add(\AuthJWT::class . ':registroMovimientos')->add(\AuthJWT::class . ':VerificarTokenValido')->add(\AuthJWT::class . ':VerificarTokenRolGerente')->add(\AuthJWT::class . ':registrarMovimientoExitoso');
+
+
+
+
+$app->group('/usuarios', function(RouteCollectorProxy $group){
+    $group->post('/alta', \usuariosController::class . ':AltaUsuario');
 });
+
+
+$app->post('/LoggingUsuario',[\Logger::class, 'LoggearUsuario']);
+
+
 
 $app->run();
